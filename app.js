@@ -44,7 +44,7 @@ app.post('/generate', upload.single('flowiseJson'), async (req, res) => {
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Oil Spill Response Chat</title>
+                <title>AI Chatbot</title>
                 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
                 <style>
                     body { margin: 4px; padding: 0; font-family: 'DM Sans', sans-serif; height: 100vh; overflow: hidden; background: transparent; box-sizing: border-box; }
@@ -68,13 +68,14 @@ app.post('/generate', upload.single('flowiseJson'), async (req, res) => {
                     .typing-dot:nth-child(3) { animation-delay: 0.4s; }
                     @keyframes typing { 0%, 20% { transform: translateY(0); opacity: 1; } 40% { transform: translateY(-5px); opacity: 0.6; } 60%, 100% { transform: translateY(0); opacity: 1; } }
                     .welcome-message { text-align: center; color: #666; padding: 20px; background: #ffffff; border-radius: 10px; margin-bottom: 20px; }
+                    .powered-by { font-size: 10px; color: #aaa; text-align: center; padding: 5px; }
                 </style>
             </head>
             <body>
                 <div class="chat-container">
-                    <div class="chat-header">Ulaliz - Matchbox Smart Learning Assistant</div>
+                    <div class="chat-header">AI Chatbot</div>
                     <div class="chat-messages" id="chatMessages">
-                        <div class="welcome-message">Hi! I'm Ulaliz, your expert tutor for this course. I'm here to help you better understand and master the Oil Spill Response material. What would you like to explore or clarify today? 🌊</div>
+                        <div class="welcome-message">Hello! I'm an AI assistant here to help. What can I assist you with today?</div>
                     </div>
                     <div class="typing-indicator" id="typingIndicator">
                         <div class="typing-dots">
@@ -88,6 +89,7 @@ app.post('/generate', upload.single('flowiseJson'), async (req, res) => {
                             <input type="text" class="chat-input" id="chatInput" placeholder="Type your message..." autocomplete="off">
                             <button class="send-button" id="sendButton">➤</button>
                         </div>
+                        <div class="powered-by">Powered by Matchbox Creative Learning</div>
                     </div>
                 </div>
                 <script>
